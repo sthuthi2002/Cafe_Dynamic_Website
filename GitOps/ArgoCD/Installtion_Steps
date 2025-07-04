@@ -19,7 +19,19 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.pas
 
 ### ArgoCD Repo Add##########
 
-argocd repo add https://github.com/your-username/your-repo.git --username <your-username> --password <your-password>
+argocd repo add https://github.com/your-username/your-repo.git --username <your-username> --password <your-password>  
+
+
+#### Create Arogocd App via CLI####
+
+
+sudo argocd app create cafe-app \
+  --repo https://github.com/sreepathysois/Cafe_Microservices_Data-Observability_Service_mesh-Stack.git \
+  --path K8s \
+  --dest-server https://kubernetes.default.svc \
+  --dest-namespace default \
+  --revision main \
+  --sync-policy automated
 
 ###Edit Argocd-server#######
 kubectl edit svc argocd-server -n argocd 
