@@ -11,5 +11,5 @@ data:
     $db_url = "mysql";  // Use MySQL service name for internal DNS resolution
     $db_name = "mom_pop_db";
     $db_user = "root";
-    $db_password = "msis@123";
+    $db_password = "Msois@123";
 
