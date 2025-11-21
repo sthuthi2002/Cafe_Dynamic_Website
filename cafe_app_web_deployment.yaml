@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cafeweb1
+  name: cafeweb
   labels:
     app: cafeapp
 spec:
@@ -21,7 +21,7 @@ spec:
         configMap:
           name: app-config
       containers:
-      - image: dvasanth26/mompopcafeapp:latest
+      - image: sreedocker123/mompopcafeapp:v1
         name: cafeweb
         volumeMounts:
         - name: app-config-volume
@@ -29,5 +29,4 @@ spec:
           subPath: getAppParameters.php  # Specify the ConfigMap key (filename)
         ports:
         - containerPort: 80
-          name: cafeweb1
-
+          name: cafeweb
