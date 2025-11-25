@@ -3,7 +3,7 @@ version: '3.8'
 services:
   cafeapp:
     build:
-      context: ./mompopcafe 
+      context: ./ 
       dockerfile: Dockerfile
     image: sthuthi22/mompopcafeapp:latest
     container_name: mompopcafeapp     
